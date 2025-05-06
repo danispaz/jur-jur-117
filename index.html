@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Produto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .tabs {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-weight: 600;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .tab.active {
+      border-bottom: 3px solid #0078d4;
+      color: #0078d4;
+    }
+    .tab i {
+      color: inherit;
+      transition: color 0.3s;
+    }
+    .tab-content {
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #505050;
+    }
+    .form-value {
+      background: #f1f3f4;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #2d2d2d;
+    }
+    .icon {
+      font-size: 12px;
+      color: #605e5c;
+    }
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", sans-serif;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .styled-table thead {
+      background-color: #57c1b2;
+      color: white;
+      text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    .styled-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('identificacao')"><i class="fas fa-id-badge icon"></i>Identificação</button>
+    <button class="tab" onclick="showTab('escopo')"><i class="fas fa-list icon"></i>Escopo</button>
+    <button class="tab" onclick="showTab('estrategia')"><i class="fas fa-bullseye icon"></i>Estratégia</button>
+    <button class="tab" onclick="showTab('qualificacao')"><i class="fas fa-check-circle icon"></i>Qualificação</button>
+  </div>
+
+  <div id="identificacao" class="tab-content active">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-box icon"></i>Nome do Produto</label>
+      <div class="form-value">Reconhecimento de Redução da Base de Cálculo do INSS Autônomos para 11,71%
+
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-align-left icon"></i>Descrição do Produto</label>
+      <p class="form-value">
+        Aplica tese jurídica que reconhece o direito à redução da base de cálculo do INSS sobre pagamentos a autônomos, de 20% para 11,71%, gerando economia previdenciária com respaldo legal e segurança na gestão da folha.</p>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-barcode icon"></i>Código</label>
+      <div class="form-value">JUR117</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-sitemap icon"></i>Área</label>
+      <div class="form-value">Jurídica</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-question-circle icon"></i>Classificação BCG</label>
+      <div class="form-value">Vaca Leiteira</div>
+    </div>
+    </div>
+
+  </div>
+
+  <div id="escopo" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-file-alt icon"></i>Escopo</label>
+      <div class="form-value">
+        <ol data-start="150" data-end="1134" data-is-only-node="" data-is-last-node="">
+          <li data-start="150" data-end="299" class="">
+          <p data-start="153" data-end="299" class=""><strong data-start="153" data-end="198">Análise jurídica da relação com autônomos</strong><br data-start="198" data-end="201">
+          Verificação da natureza das contratações e da incidência de INSS sobre os pagamentos efetuados.</p>
+          </li>
+          <li data-start="301" data-end="487" class="">
+          <p data-start="304" data-end="487" class=""><strong data-start="304" data-end="365">Levantamento dos pagamentos realizados nos últimos 5 anos</strong><br data-start="365" data-end="368">
+          Coleta de informações sobre os valores pagos a prestadores de serviço autônomos e respectivos recolhimentos de INSS.</p>
+          </li>
+          <li data-start="489" data-end="651" class="">
+          <p data-start="492" data-end="651" class=""><strong data-start="492" data-end="563">Cálculo dos valores pagos indevidamente com base na alíquota de 20%</strong><br data-start="563" data-end="566">
+          Comparação com a alíquota correta (11,71%) e apuração do potencial de recuperação.</p>
+          </li>
+          <li data-start="653" data-end="795" class="">
+          <p data-start="656" data-end="795" class=""><strong data-start="656" data-end="703">Elaboração de parecer jurídico fundamentado</strong><br data-start="703" data-end="706">
+          Fundamentação da tese com base em decisões administrativas e jurisprudência aplicável.</p>
+          </li>
+          <li data-start="797" data-end="957" class="">
+          <p data-start="800" data-end="957" class=""><strong data-start="800" data-end="860">Estruturação da estratégia de restituição ou compensação</strong><br data-start="860" data-end="863">
+          Definição da melhor forma de recuperação dos valores pagos a maior, com segurança jurídica.</p>
+          </li>
+          <li data-start="959" data-end="1134" class="">
+          <p data-start="962" data-end="1134" class=""><strong data-start="962" data-end="1034">Suporte técnico e jurídico em caso de fiscalização ou questionamento</strong><br data-start="1034" data-end="1037">
+          Acompanhamento da tese em fiscalizações, autos de infração ou eventuais exigências da Receita.</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-list-check icon"></i>Problemas que Resolve
+      </label>
+      <div class="form-value">
+        <ol data-start="133" data-end="494" data-is-last-node="" data-is-only-node="">
+          <li data-start="133" data-end="196" class="">
+          <p data-start="136" data-end="196" class="">Recolhimento indevido de INSS sobre pagamentos a autônomos</p>
+          </li>
+          <li data-start="197" data-end="247" class="">
+          <p data-start="200" data-end="247" class="">Aumento desnecessário da carga previdenciária</p>
+          </li>
+          <li data-start="248" data-end="311" class="">
+          <p data-start="251" data-end="311" class="">Falta de alinhamento com jurisprudência atual sobre o tema</p>
+          </li>
+          <li data-start="312" data-end="370" class="">
+          <p data-start="315" data-end="370" class="">Desconhecimento de direito à base de cálculo reduzida</p>
+          </li>
+          <li data-start="371" data-end="422" class="">
+          <p data-start="374" data-end="422" class="">Insegurança jurídica na aplicação de retenções</p>
+          </li>
+          <li data-start="423" data-end="494" class="">
+          <p data-start="426" data-end="494" class="">Desorganização no controle de pagamentos e recolhimentos a autônomos</p>
+          </li>
+          </ol>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="	fas fa-trophy icon"></i>Benefícios
+      </label>
+      <div class="form-value">
+        <ol data-start="125" data-end="463" data-is-last-node="" data-is-only-node="">
+          <li data-start="125" data-end="183" class="">
+          <p data-start="128" data-end="183" class="">Economia previdenciária com base jurídica consolidada</p>
+          </li>
+          <li data-start="184" data-end="250" class="">
+          <p data-start="187" data-end="250" class="">Recuperação de valores pagos indevidamente nos últimos 5 anos</p>
+          </li>
+          <li data-start="251" data-end="323" class="">
+          <p data-start="254" data-end="323" class="">Redução permanente da carga sobre a folha de pagamento de autônomos</p>
+          </li>
+          <li data-start="324" data-end="393" class="">
+          <p data-start="327" data-end="393" class="">Maior segurança jurídica nas relações com prestadores de serviço</p>
+          </li>
+          <li data-start="394" data-end="463" class="">
+          <p data-start="397" data-end="463" class="">Otimização da gestão da folha e conformidade com decisões recentes</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <div id="estrategia" class="tab-content">
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-fire icon"></i>Prioridade de Venda</label>
+        <div class="form-value">Média</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-lightbulb icon"></i>Quando Ofertar</label>
+      <div class="form-value">
+        <ol data-start="142" data-end="517" data-is-last-node="" data-is-only-node="">
+          <li data-start="142" data-end="226" class="">
+          <p data-start="145" data-end="226" class="">Quando a empresa realiza pagamentos frequentes a autônomos com retenção de INSS</p>
+          </li>
+          <li data-start="227" data-end="300" class="">
+          <p data-start="230" data-end="300" class="">Durante auditorias internas ou revisões trabalhistas/previdenciárias</p>
+          </li>
+          <li data-start="301" data-end="365" class="">
+          <p data-start="304" data-end="365" class="">Ao buscar formas de reduzir custos com encargos sobre folha</p>
+          </li>
+          <li data-start="366" data-end="436" class="">
+          <p data-start="369" data-end="436" class="">Após constatação de recolhimentos previdenciários acima de 11,71%</p>
+          </li>
+          <li data-start="437" data-end="517" class="">
+          <p data-start="440" data-end="517" class="">Quando há passivo relevante de pagamentos retroativos a prestadores autônomos</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-gem icon"></i>Proposta de Valor</label>
+      <div class="form-value">	Aplicamos tese jurídica consolidada para reduzir legalmente a base de cálculo do INSS sobre pagamentos a autônomos, de 20% para 11,71%, proporcionando economia previdenciária imediata e recuperação de valores pagos indevidamente nos últimos 5 anos — com total respaldo técnico e segurança jurídica na condução do processo.
+
+
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-shopping-basket icon"></i>Cross-selling</label>
+      <div class="form-value">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Produto Complementar</th>
+              <th>Justificativa da Conexão</th>
+              <th>Área Responsável</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Compliance Trabalhista e Previdenciária</td>
+              <td>Garante que a aplicação da alíquota reduzida esteja alinhada à legislação e às rotinas da folha de pagamento.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>BPO Trabalhista e Previdenciário</td>
+              <td>Permite a correta implementação operacional da alíquota reduzida e o controle contínuo dos encargos.</td>
+              <td>Contabilidade</td>
+            </tr>
+            <tr>
+              <td>Planejamento Orçamentário e Fluxo de Caixa</td>
+              <td>Integra os efeitos da economia previdenciária no planejamento financeiro da empresa.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>BI – Horas de Desenvolvimento</td>
+              <td>Possibilita o monitoramento visual do impacto da redução do INSS por dashboards personalizados.</td>
+              <td>Inteligência de Dados</td>
+            </tr>
+            <tr>
+              <td>Jurídico Recorrente</td>
+              <td>Oferece suporte contínuo em atualizações legais e aplicação da tese na rotina da empresa.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Defesas em Execuções Fiscais</td>
+              <td>Garante apoio em possíveis questionamentos futuros relacionados à tese aplicada.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Consultoria para Implementação de Compliance e Antissuborno</td>
+              <td>Reforça a governança na contratação de autônomos e no cumprimento das obrigações legais.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Consultoria Previdenciária</td>
+              <td>Avalia e propõe estratégias complementares de economia nos encargos sociais.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>Compensação / Restituição de Tributos Trabalhista e Previdenciária</td>
+              <td>Responsável pelo processo de recuperação dos valores pagos a maior de forma técnica e segura.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>Auditoria de Obrigações Acessórias</td>
+              <td>Verifica se a escrituração previdenciária está adequada à nova base de cálculo.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Consultoria e Assessoria no Requerimento de Depreciação Acelerada</td>
+              <td>Em empresas com frota própria, pode complementar estratégias de redução de carga tributária.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Reconhecimento de INSS sobre Verbas Indenizatórias</td>
+              <td>Complementa a tese ao avaliar outras hipóteses de pagamentos indevidos à previdência.</td>
+              <td>Jurídico</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div id="qualificacao" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-briefcase icon"></i>Regime Tributário Atendimento</label>
+      <div class="form-value">Lucro Real e Lucro Presumido</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-sync-alt icon"></i>Tipo de Cobrança</label>
+        <div class="form-value">Pontual e Êxito</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-globe icon"></i>Abrangência Geográfica</label>
+      <div class="form-value"> Nacional</div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class=" fas fa-file-invoice-dollar icon"></i>Faturamento Ideal</label>
+        <div class="form-value">Empresas com faturamento anual a partir de R$ 10 milhões</div>
+      </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-paperclip icon"></i>Documentos Solicitados</label>
+        <div class="form-value">
+          <ol data-start="134" data-end="443" data-is-last-node="" data-is-only-node="">
+            <li data-start="134" data-end="189" class="">
+            <p data-start="137" data-end="189" class="">Relação de pagamentos a autônomos (últimos 5 anos)</p>
+            </li>
+            <li data-start="190" data-end="248" class="">
+            <p data-start="193" data-end="248" class="">Comprovantes de recolhimento do INSS patronal (DARFs)</p>
+            </li>
+            <li data-start="249" data-end="312" class="">
+            <p data-start="252" data-end="312" class="">Contratos ou recibos de prestação de serviço dos autônomos</p>
+            </li>
+            <li data-start="313" data-end="369" class="">
+            <p data-start="316" data-end="369" class="">Folhas de pagamento ou registros de pagamento do RH</p>
+            </li>
+            <li data-start="370" data-end="443" class="">
+            <p data-start="373" data-end="443" class="">Procuração e documentos societários da empresa (para atuação jurídica)</p>
+            </li>
+            </ol>
+                </div>
+        
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Setores ICP</label>
+                <div class="form-value">
+                  <ol data-start="122" data-end="335">
+                    <li data-start="122" data-end="149" class="">
+                    <p data-start="125" data-end="149" class="">Transporte e logística</p>
+                    </li>
+                    <li data-start="150" data-end="171" class="">
+                    <p data-start="153" data-end="171" class="">Construção civil</p>
+                    </li>
+                    <li data-start="172" data-end="203" class="">
+                    <p data-start="175" data-end="203" class="">Indústria de transformação</p>
+                    </li>
+                    <li data-start="204" data-end="252" class="">
+                    <p data-start="207" data-end="252" class="">Agronegócio com uso de mão de obra eventual</p>
+                    </li>
+                    <li data-start="253" data-end="280" class="">
+                    <p data-start="256" data-end="280" class="">Atacado e distribuição</p>
+                    </li>
+                    <li data-start="281" data-end="335" class="">
+                    <p data-start="284" data-end="335" class="">Empresas de serviços gerais ou manutenção predial</p>
+                    </li>
+                    </ol>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class="fas fa-exclamation-circle icon"></i>Objeções Mapeadas</label>
+                <div class="form-value">
+                  <table class="styled-table">
+                    <thead>
+                      <tr>
+                        <th>Objeção</th>
+                        <th>O que o cliente quer dizer</th>
+                        <th>Como contornar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>“Nunca ouvi falar dessa alíquota de 11,71%”</td>
+                        <td>Dúvida sobre a existência ou validade da tese.</td>
+                        <td>Explique que trata-se de interpretação respaldada por jurisprudência e atos normativos, com base no cálculo técnico do FAP (Fator Acidentário de Prevenção) e RAT (Riscos Ambientais do Trabalho).</td>
+                      </tr>
+                      <tr>
+                        <td>“Tenho medo de ser autuado futuramente”</td>
+                        <td>Insegurança jurídica sobre a aplicação.</td>
+                        <td>Reforce que o serviço é fundamentado em parecer jurídico, com total conformidade legal, metodologia validada e documentação comprobatória, assegurando respaldo em eventual fiscalização.</td>
+                      </tr>
+                      <tr>
+                        <td>“Minha contabilidade disse que é melhor não mexer com isso”</td>
+                        <td>Resistência de terceiros por desconhecimento da tese.</td>
+                        <td>Esclareça que é uma tese especializada, fora do escopo tradicional da contabilidade. Ofereça uma reunião conjunta com a equipe jurídica e fiscal para apresentar os fundamentos e tirar dúvidas técnicas.</td>
+                      </tr>
+                      <tr>
+                        <td>“Já pago tudo certo, não quero problema”</td>
+                        <td>Medo de abrir passivo ou ser penalizado.</td>
+                        <td>Explique que a proposta visa justamente <strong>corrigir um pagamento acima do devido</strong>, com base legal segura. Não se trata de elisão agressiva, mas de ajuste técnico e legítimo.</td>
+                      </tr>
+                      <tr>
+                        <td>“Vai dar muito trabalho levantar tudo isso”</td>
+                        <td>Acha que exigirá esforço operacional.</td>
+                        <td>Mostre que <strong>a maior parte do processo é conduzida pela consultoria</strong>, com uso de documentos que a empresa já possui (folha de pagamento, DARFs, SEFIP), e que a participação do cliente é pontual.</td>
+                      </tr>
+                      <tr>
+                        <td>“Isso é só para grandes empresas, né?”</td>
+                        <td>Acredita que o valor recuperado não compensa.</td>
+                        <td>Reforce que <strong>qualquer empresa que contrata autônomos com frequência</strong> pode se beneficiar, mesmo de porte menor. Apresente uma simulação da economia potencial com base no volume histórico de contratações.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  
+                           
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Personas</label>
+                <div class="form-value">
+                    <ul data-start="107" data-end="257">
+                        <li data-start="107" data-end="173" class="" style="">
+                        <p data-start="109" data-end="173" class=""><strong data-start="109" data-end="129">Influenciadores:</strong>Coordenador ou Gerente de Departamento Pessoal / RH</p>
+                        </li>
+                        <li data-start="174" data-end="257" class="" style="">
+                        <p data-start="176" data-end="257" class=""><strong data-start="176" data-end="190">Decisores:</strong>Proprietário ou sócio-administrador</p>
+                        </li>
+                        </ul> </div>
+              </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-star-half-alt icon"></i>Diferenciais</label>
+      <div class="form-value">A Funcional conduz esse serviço com rigor técnico e respaldo jurídico, assegurando que a base de cálculo do INSS sobre pagamentos a autônomos seja corretamente ajustada, quando cabível, conforme a aplicação do redutor de 11,71% previsto pela Receita Federal para os casos em que há dedução de materiais e insumos utilizados na prestação de serviço.
+
+        Nosso diferencial está na análise crítica dos contratos e pagamentos realizados, verificação documental e elaboração de memória de cálculo detalhada, além da emissão de parecer técnico e orientações práticas para a aplicação segura do redutor nos recolhimentos futuros e retroativos.
+        
+        Com equipe especializada e atendimento consultivo, a Funcional oferece clareza, conformidade e economia legítima, permitindo ao cliente aplicar o benefício de forma tranquila, rastreável e fiscalmente segura.
+   
+        
+        
+        </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
